@@ -1,3 +1,0 @@
-username='useradmin@mng.com'
-password='adminpassword'
-
