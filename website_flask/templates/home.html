@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>HOME</title>
+	<link href="{{ url_for('static',filename='favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='home.css') }}">
+</head>
+<body>
+	<div class="row">
+		<div class="column left">
+		</div>
+		<div class="column middle" style="border-right: 5px solid skyblue;border-left: 5px solid skyblue; border-top: thin solid skyblue; border-bottom: thin solid skyblue;">
+			<form action= {{url_for('search') }}  method="POST">
+				  <input name="username" placeholder="username to search">
+				  <input type="submit" value="search">
+			</form>
+
+            <div align="center">
+                <h2>
+                    USERS
+                </h2>
+			<tr>
+
+			<table>
+				<tr>
+    				<th>NAME</th>
+    				<th>EMAIL</th>
+    				<th>INFO</th>
+  				</tr>
+				{% for user in users %}
+  				<tr>
+  					<td>{{user[0]}}</td>
+  					<td>{{user[1]}}</td>
+  					<td>
+						{% if user[0] == "user1" and user1!="user1" :%}
+						<form action={{url_for('upload')}}>
+	  						<input type="file" id="myFile" name="filename">
+  							<input type="submit">
+						</form>
+						{% else %}
+						<a href="{{url_for('download_file')}}">
+							<i class="fa fa-file-text" style="font-size:36px;"></i>
+						</a>
+						{% endif %}  						
+					</td>
+  				</tr>
+  				{% endfor %}
+  			</table>
+            </div>
+		</div>
+		<div class="column right">
+        
+		</div>
+	</div>
+</body>
+</html>

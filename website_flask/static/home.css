@@ -1,0 +1,48 @@
+h3 { display: inline; }
+
+		table{
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2;}
+
+		tr:hover {background-color: #ddd;}
+
+		th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #0b78bd;
+			color: white;
+			}
+
+		.middle {
+		box-sizing: border-box;
+		height: fit-content;
+		}
+		
+		.column {
+		float: left;
+		padding: 10px;
+		}
+		
+		.left, .right {
+		width: 25%;
+		height: 300px;
+		}
+		
+		.middle {
+		width: 50%;
+		}
+		
+		.row:after {
+		content: "";
+		display: table;
+		clear: both;
+		}
+

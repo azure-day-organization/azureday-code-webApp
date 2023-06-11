@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 10%;
+}
+
+.middle {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+form {   
+  border: 3px solid #f1f1f1;   
+}   
+input[type=text], input[type=password] {   
+  width: 100%;   
+  margin: 8px 0;  
+  padding: 12px 20px;   
+  display: inline-block;   
+  border: 2px solid skyblue;   
+  box-sizing: border-box;   
+}  
+button:hover {   
+  opacity: 0.7;   
+}   
+
+.container {   
+  padding: 25px;   
+  background-color: #0b78bd;  
+}   
