@@ -7,6 +7,7 @@ on:
 jobs:
   sample:
     name: Microsoft Security DevOps Analysis
+    permissions: write-all
 
     # MSDO runs on windows-latest.
     # ubuntu-latest and macos-latest supporting coming soon
